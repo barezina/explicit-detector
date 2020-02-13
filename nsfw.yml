@@ -1,0 +1,12 @@
+FROM tensorflow/tensorflow:1.15.2-py3
+COPY ./ /nsfw
+WORKDIR /nsfw
+
+# install dependencies and prime the system
+
+RUN apt-get update;
+RUN apt-get install -y git wget vim libsm6 libxrender1 libfontconfig1
+RUN python3 --version
+RUN pip3 install git+https://github.com/bedapudi6788/NudeNet
+RUN python3 classify.py
+CMD tail -f /dev/null
