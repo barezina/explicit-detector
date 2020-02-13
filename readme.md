@@ -9,7 +9,7 @@ to classify a sample image in the repo, without having to go through the pain of
 
 * Be on a Ubuntu 18.04 machine with docker and docker-compose installed
 * `git clone https://github.com/barezina/explicit-detector`
-* `docker-compose up --build -d` (you should see the two detections at the end of the build process)
+* `docker-compose up --build -d` (you should see a detection at the end of the build process)
 * `docker ps` to show running containers, note the running container for the detector
 * `docker exec -it 0a1 bash` (where `0a1` is the container ID)
 * You should land in `/nsfw`. 
