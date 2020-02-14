@@ -3,7 +3,7 @@
 Detects whether an image is SFW or NSFW using machine learning models.
 
 An easy to use docker-compose package which combines tensorflow 1.15.2 (python3) and the bedapudi6788/NudeNet github package
-to classify a sample image in the repo, without having to go through the pain of installing dependencies.
+to demo-classify a safe/unsafe image in the repo, without having to go through the pain of installing dependencies.
 
 ### How to use
 
@@ -14,4 +14,5 @@ to classify a sample image in the repo, without having to go through the pain of
 * `docker exec -it 0a1 bash` (where `0a1` is the container ID)
 * You should land in `/nsfw`. 
 * To run the classify job, run `python3 classify.py`
+* To run the detection job, run `python3 detection.py`
 * To run on your own images, place the images in the cloned folder (where you checked out this repo) on your host machine, then look inside the container at `/nsfw` which is mapped verbatim. Adjust classify.py and run the script and you are racing! 
